@@ -1,6 +1,13 @@
 <!-- This Script is from www.phpfreecpde.com, Coded by: Kerixa Inc-->
 
 
+<head>
+<style type="text/css">
+@import url('main.css');
+</style>
+</head>
+
+
 <?php
 
 	$host="localhost"; // Host name
@@ -160,4 +167,6 @@ echo('
 }
 
 ?>
+<body class="dark-theme">
+
 <br>
