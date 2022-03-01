@@ -1,0 +1,127 @@
+﻿
+<head>
+<meta content="fr-ca" http-equiv="Content-Language">
+<link href="main.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.auto-style1 {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: xx-large;
+}
+
+<style>
+<!--
+.styling{
+background-color:black;
+color:lime;
+font: bold 16px MS Sans Serif;
+padding: 3px;
+}
+-->
+</style>
+
+</style>
+
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="amazonmenu.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="amazonmenu.js">
+
+/* =====================================
+ ** Amazon Side Bar Menu- by JavaScript Kit (www.javascriptkit.com)
+ ** Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+===================================== */
+
+</script>
+
+
+<script>
+
+jQuery(function(){
+	amazonmenu.init({
+		menuid: 'mysidebarmenu'
+	})
+})
+
+</script>
+
+</head>
+
+<title>The Box Website</title>
+
+<p class="auto-style1">&nbsp;The Box</p>
+<p>&nbsp;</p>
+<body class="dark-theme">
+<div>
+</div>
+<script src="app.js"></script>
+<form method="post">
+</form>
+<p>&nbsp;</p>
+<script src="app.js"></script>
+<noscript>You need to enable JavaScript to view the full site.</noscript>
+
+<span id="digitalclock" class="styling"></span>
+
+<script>
+
+var alternate=0
+var standardbrowser=!document.all&&!document.getElementById
+
+if (standardbrowser)
+document.write('<form name="tick"><input type="text" name="tock" size="11"></form>')
+
+function show(){
+if (!standardbrowser)
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+
+if (standardbrowser){
+if (alternate==0)
+document.tick.tock.value=hours+" : "+minutes+" "+dn
+else
+document.tick.tock.value=hours+"   "+minutes+" "+dn
+}
+else{
+if (alternate==0)
+clockobj.innerHTML=hours+" : "+minutes+" "+"<sup style='font-size:70%'>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+" : "+minutes+" "+"<sup style='font-size:70%'>"+dn+"</sup>"
+}
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+//-->
+</script>
+
+<nav id="mysidebarmenu" class="amazonmenu">
+	<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="Section_2.html">Section 2</a></li>
+	<li><a href="about.html">About</a></li>
+	</ul>
+</nav>
+<div id="layer1" style="position: absolute; width: 290px; height: 38px; z-index: 1; left: 891px; top: 907px">
+<div id="ewCopy" style="text-align:center; height: 2px;">
+	<script type="text/javascript" language="javascript">document.write('&copy;&nbsp;' +(new Date()).getFullYear() + '&nbsp;&nbsp;The Box Website');</script>
+	<noscript>&copy;&nbsp;The Box Website</noscript></div>
+
+</div>
+
+
